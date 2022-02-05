@@ -9,13 +9,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/board.js"></script>
+    <script src="js/overall.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/board.css">
     <title>Document</title>
 </head>
 
 
-<body onload="updateHTML()">
+<body onload="updateHTML(), includeHTML()">
     
+    <div w3-include-html="./menu.html"></div>
+
     <div class="board-category" id="open" ondrop="drop('open')" ondragover="allowDrop(event)">
 
     </div>
