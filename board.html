@@ -10,23 +10,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/board.js"></script>
     <script src="js/overall.js"></script>
+    <link rel="stylesheet" href="css/overall.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/menu_two.css">
     <title>Document</title>
 </head>
 
 
 <body onload="updateHTML(), includeHTML()">
     
-    <div w3-include-html="./menu.html"></div>
+    <div w3-include-html="./menu_two.html"></div>
 
-    <div class="board-category" id="open" ondrop="drop('open')" ondragover="allowDrop(event)">
+    <div>
+        <div class="board-category" id="open" ondrop="drop('open')" ondragover="allowDrop(event)">
 
+        </div>
+    
+        <div class="board-category" id="close" ondrop="drop('close')" ondragover="allowDrop(event)">
+    
+        </div>
     </div>
 
-    <div class="board-category" id="close" ondrop="drop('close')" ondragover="allowDrop(event)">
-
-    </div>
 
 </body>
 

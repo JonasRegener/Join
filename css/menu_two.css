@@ -1,10 +1,6 @@
-* {
-    list-style: none;
-    text-decoration: none;
-}
-
 .sidebar {
     position: fixed;
+    top: 0;
     left: -250px;
     width: 250px;
     height: 100%;

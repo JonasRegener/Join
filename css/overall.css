@@ -1,8 +1,10 @@
 * {
     font-family: 'PT Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
-    margin: 0px;
+    margin: unset;
     background-color: white;
 }
