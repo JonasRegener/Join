@@ -1,0 +1,16 @@
+.board-category {
+    width: 80%;
+    height: 300px;
+    background-color: bisque;
+    margin: 10px;
+}
+
+.board-element {
+    text-align: center;
+    background-color: aquamarine;
+    max-width: 20%;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
