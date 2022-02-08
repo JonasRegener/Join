@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/addTask.js"></script>
+    <script src="js/overall.js"></script>
+
 </head>
+
 <body>
-    Include menu
-    Another Git Push Test
-   Retesting
+    <h1>Add Task</h1>
+    <p>Learning Management System Project</p>
+    <div>
+        <div class="AddTaskMain" id="addTaskMain" onsubmit="enterInformation()">
+            TITLE <input id="title" required minlength="0"> DUE DATE<input required type="date"> Category
+            <select id="category" required>
+                <!--     <option value="" disabled selected>Select department</option> -->
+                <option value="Designer">Designer</option>
+                <option value="Frontend">Frontend </option>
+                <option value="Backend">Backend </option>
+                <option value="SCRUM Master">SCRUM Master </option>
+                <option value="Outsorcing">Outsorcing </option>
+            </select>
+            Urgency
+            <select id="urgency" required>
+                <!--        <option value="" disable selected> Importance </option> -->
+                <option value="1High">High </option>
+                <option value="Medium">Medium </option>
+                <option value="Low">Low </option>
+            </select>
+            Description
+            <textarea required minlength="0" id="description">
+
+            </textarea>
+            Assigned To
+            <div class="containerAssignedTo" id="containerAssignedTo">
+
+            </div>
+            <div></div>
+            <button> Cancel</button>
+            <button onclick="enterInformation()"> Create Task</button> 
+
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
+
 </html>
