@@ -1,39 +1,39 @@
 let todos = [{
     'id': 0,
     'title': 'Putzen',
-    'category': 'open'
+    'category': 'toDo'
 }, {
     'id': 1,
     'title': 'Kochen',
-    'category': 'open'
+    'category': 'toDo'
 }, {
     'id': 2,
     'title': 'Windeln',
-    'category': 'open'
+    'category': 'inProgress'
 }
 ];
 
-let open;
-let close;
+let toDo;
+let inProgress;
 let currentElement;
 
 function updateHTML() {
-    open = todos.filter(t => t['category'] == 'open');
+    toDo = todos.filter(t => t['category'] == 'toDo');
 
-    document.getElementById('open').innerHTML = '';
+    document.getElementById('toDo').innerHTML = '';
 
-    for (let i = 0; i < open.length; i++) {
-        const element = open[i];
-        document.getElementById('open').innerHTML += fillOpenHTML(element);
+    for (let i = 0; i < toDo.length; i++) {
+        const element = toDo[i];
+        document.getElementById('toDo').innerHTML += fillOpenHTML(element);
     }
 
-    close = todos.filter(t => t['category'] == 'close');
+    inProgress = todos.filter(t => t['category'] == 'inProgress');
 
-    document.getElementById('close').innerHTML = '';
+    document.getElementById('inProgress').innerHTML = '';
 
-    for (let index = 0; index < close.length; index++) {
-        const element = close[index];
-        document.getElementById('close').innerHTML += fillCloseHTML(element);
+    for (let index = 0; index < inProgress.length; index++) {
+        const element = inProgress[index];
+        document.getElementById('inProgress').innerHTML += fillCloseHTML(element);
     }
 }
 
@@ -49,15 +49,6 @@ function drop(category) {
     todos[currentElement]['category'] = category;
     updateHTML();
 }
-
-
-
-
-
-
-
-
-
 
 function fillOpenHTML(element) {
     return `<div draggable="true" ondragstart="startDragging(${element['id']})" class="board-element">${element['title']}</div>`

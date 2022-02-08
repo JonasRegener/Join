@@ -20,17 +20,38 @@
 
 
 <body onload="updateHTML(), includeHTML()">
-    
+
     <div w3-include-html="./menu_two.html"></div>
 
-    <div>
-        <div class="board-category" id="open" ondrop="drop('open')" ondragover="allowDrop(event)">
+    <div class="board">
+        <div class="board-section">
+            <h3>To Do</h3>
+            <div class="board-category" id="toDo" ondrop="drop('toDo')" ondragover="allowDrop(event)">
 
+            </div>
         </div>
-    
-        <div class="board-category" id="close" ondrop="drop('close')" ondragover="allowDrop(event)">
-    
+
+        <div class="board-section">
+            <h3>In Progress</h3>
+            <div class="board-category" id="inProgress" ondrop="drop('inProgress')" ondragover="allowDrop(event)">
+
+            </div>
         </div>
+
+        <div class="board-section">
+            <h3>In Progress</h3>
+            <div class="board-category" id="inProgress" ondrop="drop('inProgress')" ondragover="allowDrop(event)">
+
+            </div>
+        </div>
+
+        <div class="board-section">
+            <h3>In Progress</h3>
+            <div class="board-category" id="inProgress" ondrop="drop('inProgress')" ondragover="allowDrop(event)">
+
+            </div>
+        </div>
+
     </div>
 
 
