@@ -1,0 +1,36 @@
+.AddTaskMain {
+    background-color: rgb(244, 245, 251);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+.addTaskMainBox {
+    padding-top: 56px;
+    padding-left: 135px;
+}
+
+
+.CancelButton {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgb(244, 245, 251);
+    border: none;
+    padding: 16px;
+}
+.CreateTaskButton {
+    background-color: rgb(19, 39, 138);
+    color: rgb(244, 245, 251);
+    padding: 16px;
+
+}
+
+
+.AddTaskButtonsBox {
+    display: flex;
+
+}

@@ -6,15 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/addTask.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
     <script src="js/addTask.js"></script>
     <script src="js/overall.js"></script>
 
 </head>
 
 <body>
-    <h1>Add Task</h1>
-    <p>Learning Management System Project</p>
-    <div>
+    <div w3-include-html="menu.html"></div>
+    <div class="addTaskMainBox">
+
+        <h2>Add Task</h2>
+        <p>Learning Management System Project</p>
         <div class="AddTaskMain" id="addTaskMain" onsubmit="enterInformation()">
             TITLE <input id="title" required minlength="0"> DUE DATE<input required type="date"> Category
             <select id="category" required>
@@ -39,17 +43,22 @@
             Assigned To
             <div class="containerAssignedTo" id="containerAssignedTo">
 
-            </div>
-            <div></div>
-            <button> Cancel</button>
-            <button onclick="enterInformation()"> Create Task</button> 
 
+                <div class="AddTaskButtonsBox">
+                    <div class="CancelButton" onclick=""> Cancel</div>
+                    <div class="CreateTaskButton" onclick="enterInformation()"> Create Task</div>
+                </div>
             </div>
         </div>
+
+    </div>
     </div>
 
 
 
 </body>
+<script>
+    includeHTML();
+</script>
 
 </html>
