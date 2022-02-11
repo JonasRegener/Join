@@ -6,4 +6,11 @@ async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
     text = JSON.parse(backend.getItem('text')) || [];
+    showBacklog();
+}
+
+async function showBacklog() {
+content_backlog = document.getElementById('backlog-content').innerHTML;
+
+
 }
