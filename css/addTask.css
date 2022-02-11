@@ -19,19 +19,21 @@ h2 {
 
 
 .addTaskMainBox {
-    padding-top: 56px;
-    padding-left: 135px;
+    padding-top: 64px;
+    padding-left: 156px;
 }
 
 
 .CancelButton {
     cursor: pointer;
     text-decoration: none;
-    background-color: rgb(244, 245, 251);
+    background-color: rgb(210, 210, 218);
     color: rgb(19, 39, 138);
     border: none;
     padding: 16px;
     font-weight: bold;
+    border-radius: 8px;
+    margin-right: 8px;
 
 }
 
@@ -40,6 +42,17 @@ h2 {
     color: rgb(244, 245, 251);
     padding: 16px;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.CancelButton:hover {
+    background-color: rgb(19, 39, 138);
+    color: rgb(244, 245, 251);
+}
+
+.CreateTaskButton:hover {
+    background-color: rgb(210, 210, 218);
+    color: rgb(19, 39, 138);
 }
 
 
@@ -56,15 +69,19 @@ h2 {
 
 .container-title input {
     width: 38vw;
+    cursor: pointer;
+    height: 24px
+
 }
 
 .container-category {
     width: 40vw;
+
 }
 
 .container-category select {
     width: 38vw;
-
+    cursor: pointer;
 }
 
 .container-date {
@@ -73,7 +90,21 @@ h2 {
 
 .inputDate {
     width: 38vw;
+    height: 26px;
+    background-size: cover;
 }
+
+.inputDate::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url("/assets/img/icons8-calendar-150.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    
+}
+
 
 .container-urgency {
     width: 40vw;
@@ -81,6 +112,7 @@ h2 {
 
 .container-urgency select {
     width: 38vw;
+    cursor: pointer;
 }
 
 .container-description {

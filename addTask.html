@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Join - Add Task</title>
     <link rel="stylesheet" type="text/css" href="css/addTask.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/overall.css">
     <script src="js/addTask.js"></script>
     <script src="js/overall.js"></script>
 
@@ -28,7 +29,7 @@
 
             <div class="container-date">
                 <h3>DUE DATE</h3>
-                <input class="inputDate" required type="date">
+                <input class="inputDate"  id="date" required type="date">
             </div>
 
             <div class="container-category">
@@ -63,8 +64,8 @@
 
 
                     <div class="AddTaskButtonsBox">
-                        <div class="CancelButton" onclick=""> Cancel</div>
-                        <div class="CreateTaskButton" onclick="enterInformation()"> Create Task</div>
+                        <div class="CancelButton" onclick=""> <b>Cancel</b></div>
+                        <div class="CreateTaskButton" onclick="enterInformation()"><b> Create Task</b></div>
                     </div>
                 </div>
             </div>

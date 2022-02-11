@@ -8,3 +8,8 @@ body {
     margin: unset;
     background-color: white;
 }
+
+.content-box {
+    padding-top: 56px;
+    padding-left: 156px;
+}
