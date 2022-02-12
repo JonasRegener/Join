@@ -1,4 +1,31 @@
 .backlog-titles {
     display: flex;
     justify-content: space-between;
+    width: 100vh -156px;
+
+}
+
+h3 {
+    color: rgb(19, 39, 138);
+}
+
+.padding-right-zero {
+    padding-right: 0 !important;
+}
+
+.text-align-end {
+    text-align: end;
+}
+
+.backlog-content {
+    display: flex;
+    background-color: rgb(241, 240, 251);
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.assignedToDetails {
+    width: 27vw;
 }
