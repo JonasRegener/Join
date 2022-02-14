@@ -11,5 +11,11 @@ function enterInformation() {
     informations.push(currentInformation);
 
     console.log(informations);
+
+    document.getElementById("title").value = '';
+    document.getElementById("category").value = '';
+    document.getElementById("urgency").value = '';
+    document.getElementById("description").value = '';
+    document.getElementById("date").value = '';
 }
 
