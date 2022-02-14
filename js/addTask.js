@@ -10,6 +10,7 @@ function enterInformation() {
     let currentInformation = { "title": title, "category": category, "urgency": urgency, "description": description, "date": date };
     informations.push(currentInformation);
 
+    saveInformations();
     console.log(informations);
 
     document.getElementById("title").value = '';
@@ -18,4 +19,3 @@ function enterInformation() {
     document.getElementById("description").value = '';
     document.getElementById("date").value = '';
 }
-
