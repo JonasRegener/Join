@@ -36,6 +36,9 @@ function showBacklog() {
     }
 }
 
-function addToTaskBoard(i) {
-
+async function addToTaskBoard(i) {
+    taskBoard.push(informations[i]);
+    await deleteTask(i);
+    await saveTaskBoard();
+    await initBoard()
 }

@@ -20,13 +20,13 @@ async function deleteTask(i) {
 //     backend.deleteItem('informations');}
 // 
 
-async function saveInformationsBoard() {
-    await backend.setItem('informations', JSON.stringify(informations));
+async function saveTaskBoard() {
+    await backend.setItem('taskBoard', JSON.stringify(taskBoard));
 }
 
 async function initBoard() {
     await downloadFromServer();
-    informations = JSON.parse(backend.getItem('informations')) || [];
+    taskBoard = JSON.parse(backend.getItem('taskBoard')) || [];
 }
 
 async function deleteTaskBoard(i) {
