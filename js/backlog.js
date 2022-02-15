@@ -42,7 +42,7 @@ function moveTask(index) {
     document.getElementById(index).innerHTML = ""
     document.getElementById(index).classList.add("backlog-content-container-flex")
     document.getElementById(index).innerHTML += `
-    <div class="MoveBacklogButtons" id="backlog${index}">
+    <div class="MoveBacklogButtons" id="backlog${index}" onclick="showBacklog()">
     <div class="moveToBoard" onclick=""> Move Task To Board </div>
     <div class="deleteFromBacklog" onclick=""> Delete Task </div>
     </div>
