@@ -15,6 +15,8 @@ let todos = [{
 
 let toDo;
 let inProgress;
+let testing;
+let done;
 let currentElement;
 
 function updateHTML() {
@@ -34,6 +36,24 @@ function updateHTML() {
     for (let index = 0; index < inProgress.length; index++) {
         const element = inProgress[index];
         document.getElementById('inProgress').innerHTML += fillCloseHTML(element);
+    }
+
+    testing = todos.filter(t => t['category'] == 'testing');
+
+    document.getElementById('testing').innerHTML = '';
+
+    for (let i = 0; i < testing.length; i++) {
+        const element = testing[i];
+        document.getElementById('testing').innerHTML += fillOpenHTML(element);
+    }
+
+    done = todos.filter(t => t['category'] == 'done');
+
+    document.getElementById('done').innerHTML = '';
+
+    for (let i = 0; i < done.length; i++) {
+        const element = done[i];
+        document.getElementById('done').innerHTML += fillOpenHTML(element);
     }
 }
 
