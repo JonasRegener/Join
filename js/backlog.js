@@ -1,4 +1,9 @@
 
+async function initBacklog() {
+    await init();
+    showBacklog();
+}
+
 function showBacklog() {
 let content_backlog = document.getElementById('backlog-content').innerHTML;
     for (let index = 0; index < informations.length; index++) {
@@ -14,7 +19,6 @@ let content_backlog = document.getElementById('backlog-content').innerHTML;
         <div class="assignedToPerson">
             <div class="assignedToName"> Name </div>
             <a href="mailto:Email@email.com">Email@email.com</a>
-        </div>
         </div>
         <div class="assignedToCategory">
         Category

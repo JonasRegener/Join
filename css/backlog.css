@@ -19,7 +19,7 @@ h3 {
 
 .backlog-content {
     display: flex;
-    background-color: rgb(241, 240, 251);
+    flex-direction: column;
     border-radius: 12px;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,10 @@ h3 {
 
 .backlog-content-container-flex {
     display: flex;
-    width: 30vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(241, 240, 251);
 }
