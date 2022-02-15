@@ -16,6 +16,7 @@
     margin-right: 10px;
     margin-top: 10px;
     background-color: aquamarine;
+    overflow: auto;
 }
 
 .board-category {

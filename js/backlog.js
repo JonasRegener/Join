@@ -1,4 +1,4 @@
-let taskBoard = [];
+
 
 
 async function showBacklog() {

@@ -1,5 +1,3 @@
-let informations = [];
-let information;
 
 async function enterInformation() {
     await init();
