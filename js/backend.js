@@ -5,32 +5,23 @@ async function saveInformations() {
 }
 
 async function init() {
+    informations = '';
+    taskBoard = '';
     await downloadFromServer();
     informations = JSON.parse(backend.getItem('informations')) || [];
+    taskBoard = JSON.parse(backend.getItem('taskBoard')) || [];
 }
 
 async function deleteTask(i) {
     informations.splice([i], 1);
     await saveInformations();
-    await initBacklog();
 }
-
-
-// function deleteTask2(informations[i]) {
-//     backend.deleteItem('informations');}
-// 
 
 async function saveTaskBoard() {
     await backend.setItem('taskBoard', JSON.stringify(taskBoard));
 }
 
-async function initBoard() {
-    await downloadFromServer();
-    taskBoard = JSON.parse(backend.getItem('taskBoard')) || [];
-}
-
 async function deleteTaskBoard(i) {
-    informations.splice([i], 1);
-    await saveInformations();
-    await initBacklog();
+    taskBoard.splice([i], 1);
+    await saveTaskBoard();
 }

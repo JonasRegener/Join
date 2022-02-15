@@ -1,12 +1,8 @@
 let taskBoard = [];
 
 
-async function initBacklog() {
+async function showBacklog() {
     await init();
-    showBacklog();
-}
-
-function showBacklog() {
     let content_backlog = document.getElementById('backlog-content').innerHTML;
     document.getElementById('backlog-content').innerHTML = ``;
     for (let index = 0; index < informations.length; index++) {
@@ -38,7 +34,7 @@ function showBacklog() {
 
 async function addToTaskBoard(i) {
     taskBoard.push(informations[i]);
-    await deleteTask(i);
     await saveTaskBoard();
-    await initBoard()
+    await deleteTask(i);
+    await showBacklog();
 }
