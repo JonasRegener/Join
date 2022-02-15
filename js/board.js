@@ -13,6 +13,10 @@ let todos = [{
 }
 ];
 
+
+
+
+
 let toDo;
 let inProgress;
 let testing;
@@ -56,6 +60,12 @@ function updateHTML() {
         document.getElementById('done').innerHTML += fillOpenHTML(element);
     }
 }
+
+
+
+
+
+
 
 function startDragging(id) {
     currentElement = id;
