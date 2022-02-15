@@ -1,3 +1,5 @@
+let taskBoard = [];
+
 
 async function initBacklog() {
     await init();
@@ -5,10 +7,12 @@ async function initBacklog() {
 }
 
 function showBacklog() {
-let content_backlog = document.getElementById('backlog-content').innerHTML;
+    let content_backlog = document.getElementById('backlog-content').innerHTML;
+    document.getElementById('backlog-content').innerHTML = ``;
     for (let index = 0; index < informations.length; index++) {
         const element = informations[index];
         document.getElementById('backlog-content').innerHTML += `
+        <div id="${index}" class="backlog-content-container">
         <div class="backlog-content-container-flex">
         <div class="assignedToColor">
             Farbe
@@ -27,6 +31,11 @@ let content_backlog = document.getElementById('backlog-content').innerHTML;
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequatur saepe accusamus excepturi
         omnis similique sunt vel magnam nemo facilis.
         </div>
+        </div>
         `
     }
+}
+
+function addToTaskBoard(i) {
+
 }

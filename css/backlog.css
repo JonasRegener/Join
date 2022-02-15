@@ -39,3 +39,7 @@ h3 {
     padding: 10px;
     background-color: rgb(241, 240, 251);
 }
+
+.backlog-content-container {
+    width: 100%;
+}
