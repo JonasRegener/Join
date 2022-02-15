@@ -7,7 +7,7 @@ async function showBacklog() {
         const element = informations[index];
         document.getElementById('backlog-content').innerHTML += `
         <div id="${index}" class="backlog-content-container">
-        <div class="backlog-content-container-flex">
+        <div class="backlog-content-container-flex" onclick=moveTask(${index})>
         <div class="assignedToColor">
             Farbe
         </div>
@@ -36,4 +36,15 @@ async function addToTaskBoard(i) {
     await saveTaskBoard();
     await deleteTask(i);
     await showBacklog();
+}
+
+function moveTask(index) {
+    document.getElementById(index).innerHTML = ""
+    document.getElementById(index).classList.add("backlog-content-container-flex")
+    document.getElementById(index).innerHTML += `
+    <div class="MoveBacklogButtons" id="backlog${index}">
+    <div class="moveToBoard" onclick=""> Move Task To Board </div>
+    <div class="deleteFromBacklog" onclick=""> Delete Task </div>
+    </div>
+    `
 }
