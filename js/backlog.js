@@ -1,6 +1,4 @@
 
-
-
 async function showBacklog() {
     await init();
     let content_backlog = document.getElementById('backlog-content').innerHTML;
@@ -33,6 +31,7 @@ async function showBacklog() {
 }
 
 async function addToTaskBoard(i) {
+    informations[i]['status'] = "toDo"; 
     taskBoard.push(informations[i]);
     await saveTaskBoard();
     await deleteTask(i);
