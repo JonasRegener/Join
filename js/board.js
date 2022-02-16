@@ -30,6 +30,7 @@ function updateHTML() {
 
     for (let i = 0; i < toDo.length; i++) {
         const element = toDo[i];
+        
         document.getElementById('toDo').innerHTML += fillOpenHTML(element);
     }
 
@@ -37,8 +38,8 @@ function updateHTML() {
 
     document.getElementById('inProgress').innerHTML = '';
 
-    for (let index = 0; index < inProgress.length; index++) {
-        const element = inProgress[index];
+    for (let i = 0; i < inProgress.length; i++) {
+        const element = inProgress[i];
         document.getElementById('inProgress').innerHTML += fillCloseHTML(element);
     }
 

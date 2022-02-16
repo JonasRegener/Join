@@ -23,5 +23,8 @@ async function saveTaskBoard() {
 
 async function deleteTaskBoard(i) {
     taskBoard.splice([i], 1);
+    for (let i = 0; i < taskBoard.length; i++) {
+        taskBoard[i][`id`] = `${i}`;
+    }
     await saveTaskBoard();
 }

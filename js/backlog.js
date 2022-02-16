@@ -31,8 +31,11 @@ async function showBacklog() {
 }
 
 async function addToTaskBoard(i) {
-    informations[i]['status'] = "toDo"; 
+    informations[i]['status'] = "toDo";
     taskBoard.push(informations[i]);
+    for (let i = 0; i < taskBoard.length; i++) {
+        taskBoard[i][`id`] = `${i}`;
+    }
     await saveTaskBoard();
     await deleteTask(i);
     await showBacklog();
