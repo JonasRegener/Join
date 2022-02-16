@@ -62,8 +62,9 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function drop(status) {
+async function drop(status) {
     taskBoard[currentElement]['status'] = status;
+    await saveTaskBoard();
     updateHTML();
 }
 
