@@ -1,17 +1,3 @@
-// let todos = [{
-//     'id': 0,
-//     'title': 'Putzen',
-//     'category': 'toDo'
-// }, {
-//     'id': 1,
-//     'title': 'Kochen',
-//     'category': 'toDo'
-// }, {
-//     'id': 2,
-//     'title': 'Windeln',
-//     'category': 'inProgress'
-// }
-// ];
 
 let toDo;
 let inProgress;
