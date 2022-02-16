@@ -1,6 +1,8 @@
 let taskBoard = [];
 let informations = [];
 
+let board = false;
+
 
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
