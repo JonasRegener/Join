@@ -20,6 +20,7 @@ function updateHTML() {
         const element = toDo[i];
         
         document.getElementById('toDo').innerHTML += fillOpenHTML(element);
+        document.getElementById(`board${element['id']}`).style.borderLeft = `5px solid ${element['color']}`;
     }
 
     inProgress = taskBoard.filter(t => t['status'] == 'inProgress');
@@ -29,6 +30,7 @@ function updateHTML() {
     for (let i = 0; i < inProgress.length; i++) {
         const element = inProgress[i];
         document.getElementById('inProgress').innerHTML += fillCloseHTML(element);
+        document.getElementById(`board${element['id']}`).style.borderLeft = `5px solid ${element['color']}`;
     }
 
     testing = taskBoard.filter(t => t['status'] == 'testing');
@@ -38,6 +40,7 @@ function updateHTML() {
     for (let i = 0; i < testing.length; i++) {
         const element = testing[i];
         document.getElementById('testing').innerHTML += fillCloseHTML(element);
+        document.getElementById(`board${element['id']}`).style.borderLeft = `5px solid ${element['color']}`;
     }
 
     done = taskBoard.filter(t => t['status'] == 'done');
@@ -47,6 +50,7 @@ function updateHTML() {
     for (let i = 0; i < done.length; i++) {
         const element = done[i];
         document.getElementById('done').innerHTML += fillCloseHTML(element);
+        document.getElementById(`board${element['id']}`).style.borderLeft = `5px solid ${element['color']}`;
     }
 }
 
@@ -64,9 +68,9 @@ function drop(status) {
 }
 
 function fillOpenHTML(element) {
-    return `<div draggable="true" ondragstart="startDragging(${element['id']})" class="board-element"><p>${element['date']}</p><p>${element['title']}</p><p>${element['description']}</p><p>${element['category']}</p></div>`
+    return `<div id="board${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="board-element"><p>${element['date']}</p><p>${element['title']}</p><p>${element['description']}</p><p>${element['category']}</p></div>`
 }
 
 function fillCloseHTML(element) {
-    return `<div draggable="true" ondragstart="startDragging(${element['id']})" class="board-element"><p>${element['date']}</p><p>${element['title']}</p><p>${element['description']}</p><p>${element['category']}</p></div>`
+    return `<div id="board${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="board-element"><p>${element['date']}</p><p>${element['title']}</p><p>${element['description']}</p><p>${element['category']}</p></div>`
 }

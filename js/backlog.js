@@ -6,11 +6,8 @@ async function showBacklog() {
     for (let index = 0; index < informations.length; index++) {
         const element = informations[index];
         document.getElementById('backlog-content').innerHTML += `
-        <div id="${index}" class="backlog-content-container">
-        <div class="backlog-content-container-flex" onclick=moveTask(${index})>
-        <div class="assignedToColor">
-            Farbe
-        </div>
+        <div class="backlog-content-container">
+        <div id="backlog${index}"  class="backlog-content-container-flex" onclick=moveTask(${index})>
         <div class="assignedToUserImage">
             Bild
         </div>
@@ -27,6 +24,7 @@ async function showBacklog() {
         </div>
         </div>
         `
+        document.getElementById(`backlog${index}`).style.borderLeft = `5px solid ${element['color']}`;
     }
 }
 

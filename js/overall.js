@@ -1,3 +1,9 @@
+// color designer #e2d810
+// color frontend #d9138a
+// color backend #12a4d9
+// color Scrum #322e2f
+// color outsourcing #5c3c92
+
 let taskBoard = [];
 let informations = [];
 
