@@ -28,7 +28,7 @@ async function enterInformation() {
         if (category == 'Outsorcing') {
             color = '#5c3c92';
         }
-        let currentInformation = { "title": title, "category": category, "urgency": urgency, "description": description, "date": date, "color": color, "firsName": firstName, "lastName": lastName, "email": email, "picture": picture};
+        let currentInformation = { "title": title, "category": category, "urgency": urgency, "description": description, "date": date, "color": color, "firstName": firstName, "lastName": lastName, "email": email, "picture": picture};
         informations.push(currentInformation);
         await saveInformations();   
     }
