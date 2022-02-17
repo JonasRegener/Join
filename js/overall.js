@@ -5,7 +5,7 @@
 // color outsourcing #5c3c92
 
 let employees = [];
-
+let employeesForTask = [];
 let taskBoard = [];
 let informations = [];
 

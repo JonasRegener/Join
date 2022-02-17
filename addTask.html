@@ -31,7 +31,7 @@
 
             <div class="container-date">
                 <h3>DUE DATE</h3>
-                <input class="inputDate"  id="date" required type="date">
+                <input class="inputDate" id="date" required type="date">
             </div>
 
             <div class="container-category">
@@ -63,12 +63,11 @@
             <div class="container-assignedTo">
                 <h3>Assigned To</h3>
                 <div class="containerAssignedTo" id="containerAssignedTo">
-                    <div class="profil">
-                        <img class="profile-picture" src="assets/profil/profil_1.jpg" alt="">
-                        <p>Nina</p>
-                        <p>Muster</p>
+                    <div class="dropdown">
+                        <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
+                        <div id="myDropdown" class="dropdown-content">
+                        </div>
                     </div>
-                    <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="">
                 </div>
                 <div class="AddTaskButtonsBox">
                     <div class="CancelButton" onclick=""> <b>Cancel</b></div>
