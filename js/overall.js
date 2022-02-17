@@ -4,6 +4,27 @@
 // color Scrum #322e2f
 // color outsourcing #5c3c92
 
+let employees = [
+    {
+        "firstName": "Nina",
+        "lastName": "Muster",
+        "email": "nina.muster@join.de",
+        "picture": "assets/profil/profil_1.jpg"
+    },
+    {
+        "firstName": "Mark",
+        "lastName": "Green",
+        "email": "mark.green@join.de",
+        "picture": "assets/profil/profil_2.jpg"
+    },
+    {
+        "firstName": "Ann",
+        "lastName": "Prompt",
+        "email": "ann.prompt@join.de",
+        "picture": "assets/profil/profil_3.jpg"
+    }
+]
+
 let taskBoard = [];
 let informations = [];
 
