@@ -13,11 +13,11 @@ async function showBacklog() {
         <div id="${index}" class="backlog-content-container">
         <div id="backlog-content-color-${index}"  class="backlog-content-container-flex" onclick=moveTask(${index})>
         <div class="assignedToUserImage">
-            Bild
+            <img class="profile-picture" src="${element["picture"]}" alt="">
         </div>
         <div class="assignedToPerson">
-            <div class="assignedToName"> Name </div>
-            <a href="mailto:Email@email.com">Email@email.com</a>
+            <div class="assignedToName"> ${element["firstName"]} ${element["lastName"]} </div>
+            <a href="mailto:${element["email"]}">${element["email"]}</a>
         </div>
         <div class="assignedToCategory">
         ${element['category']}
