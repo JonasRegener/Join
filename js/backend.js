@@ -10,6 +10,7 @@ async function init() {
     await downloadFromServer();
     informations = JSON.parse(backend.getItem('informations')) || [];
     taskBoard = JSON.parse(backend.getItem('taskBoard')) || [];
+    employees = JSON.parse(backend.getItem('employees')) || [];
 }
 
 async function deleteTask(i) {
@@ -27,4 +28,8 @@ async function deleteTaskBoard(i) {
         taskBoard[i][`id`] = `${i}`;
     }
     await saveTaskBoard();
+}
+
+async function saveEmployees() {
+    await backend.setItem('employees', JSON.stringify(employees));
 }
