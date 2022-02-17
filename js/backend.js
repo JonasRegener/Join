@@ -33,3 +33,8 @@ async function deleteTaskBoard(i) {
 async function saveEmployees() {
     await backend.setItem('employees', JSON.stringify(employees));
 }
+
+async function deleteEmployees(i) {
+    employees.splice([i], 1);
+    await employees();
+}
