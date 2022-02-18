@@ -9,7 +9,7 @@ html {
     justify-content: start;
     flex-wrap: wrap;
     flex-direction: start;
-
+    border-radius: 15px;
 
 }
 
@@ -65,17 +65,18 @@ h2 {
 
 .container-title {
     width: 40vw;
+    margin: 8px;
 }
 
 .container-title input {
     width: 38vw;
     cursor: pointer;
     height: 24px
-
 }
 
 .container-category {
     width: 40vw;
+    margin: 8px;
 
 }
 
@@ -86,6 +87,7 @@ h2 {
 
 .container-date {
     width: 40vw;
+    margin: 8px;
 }
 
 .inputDate {
@@ -102,12 +104,13 @@ h2 {
     background: url("/assets/img/icons8-calendar-150.png") no-repeat;
     width: 16px;
     height: 16px;
-    
+
 }
 
 
 .container-urgency {
     width: 40vw;
+    margin: 8px;
 }
 
 .container-urgency select {
@@ -117,6 +120,7 @@ h2 {
 
 .container-description {
     width: 40vw;
+    margin: 8px;
 }
 
 .container-description textarea {
@@ -131,6 +135,7 @@ h2 {
 
 .container-assignedTo {
     width: 40vw;
+    margin: 8px;
 }
 
 .containerAssignedTo {
@@ -145,47 +150,52 @@ h2 {
     margin-left: 10px;
 }
 
- /* Dropdown Button */
- .dropbtn {
+/* Dropdown Button */
+.dropbtn {
     background-color: #3498DB;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;} 
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
