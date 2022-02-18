@@ -1,0 +1,16 @@
+
+
+.GITBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    height: 50vh;
+    width: 100%;
+
+}
+
+.GITBoxSmall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
