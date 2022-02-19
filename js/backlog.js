@@ -12,22 +12,22 @@ async function showBacklog() {
         document.getElementById('backlog-content').innerHTML += `
         <div id="${index}" class="backlog-content-container">
         <div id="backlog-content-color-${index}"  class="backlog-content-container-flex" onclick=moveTask(${index})>
-        <div class="assignedToUserImage">
+        <div class="assignedToUserImage" style="width: 50px;">
             <img class="profile-picture" src="${element["picture"]}" alt="">
         </div>
-        <div class="assignedToPerson">
+        <div class="assignedToPerson" style="width: 250px;">
             <div class="assignedToName"> ${element["firstName"]} ${element["lastName"]} </div>
             <a href="mailto:${element["email"]}">${element["email"]}</a>
         </div>
-        <div class="assignedToCategory">
+        <div class="assignedToCategory" style="width: 200px;">
         ${element['category']}
         </div>
-        <div class="assignedToDetails">
-        ${element['description']}
+        <div class="assignedToDetails" style="width: 280px;">
+        ${element["title"]}
         </div>
         </div>
         `
-        document.getElementById(`backlog-content-color-${index}`).style.borderLeft = `5px solid ${element['color']}`;
+        document.getElementById(`backlog-content-color-${index}`).style.borderLeft = `8px solid ${element['color']}`;
     }
 }
 

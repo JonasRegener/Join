@@ -24,6 +24,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     height: auto;
+    width: 95%;
 }
 
 .assignedToDetails {
@@ -32,16 +33,18 @@ h3 {
 
 .backlog-content-container-flex {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
     padding: 10px;
     background-color: rgb(241, 240, 251);
+    height: 75px;
+    border-radius: 15px;
 }
 
 .backlog-content-container {
     width: 100%;
+    border-radius: 15px;
 }
 
 .backlog-content-container-flex:hover {
