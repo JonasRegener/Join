@@ -8,9 +8,8 @@ html {
     align-items: start;
     justify-content: start;
     flex-wrap: wrap;
-    flex-direction: start;
     border-radius: 15px;
-
+    margin-top: 7%;
 }
 
 h2 {
@@ -38,11 +37,13 @@ h2 {
 }
 
 .CreateTaskButton {
+    text-align: center;
     background-color: rgb(19, 39, 138);
     color: rgb(244, 245, 251);
     padding: 16px;
     border-radius: 8px;
     cursor: pointer;
+    width: 150px;
 }
 
 .CancelButton:hover {
@@ -198,4 +199,11 @@ h2 {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display: block;
+}
+
+.add-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-top: 20px;
 }

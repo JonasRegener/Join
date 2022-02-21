@@ -33,19 +33,7 @@ async function enterInformation() {
         await saveInformations();   
     }
 
-    document.getElementById("title").value = '';
-    document.getElementById("category").value = '';
-    document.getElementById("urgency").value = '';
-    document.getElementById("description").value = '';
-    document.getElementById("date").value = '';
-    employeesForTask = [];
-    document.getElementById("containerAssignedTo").innerHTML = `
-    <div class="dropdown">
-        <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
-        <div id="myDropdown" class="dropdown-content">
-        </div>
-    </div>
-    ` 
+    resetInformation();
 }
 
 /* When the user clicks on the button,
@@ -91,4 +79,20 @@ function deleteSelectedEmployees(i) {
     let selectedEmployees = document.getElementById(`profil${i}`);
     selectedEmployees.remove();
     employeesForTask.splice([i], 1)
+}
+
+function resetInformation() {
+    document.getElementById("title").value = '';
+    document.getElementById("category").value = '';
+    document.getElementById("urgency").value = '';
+    document.getElementById("description").value = '';
+    document.getElementById("date").value = '';
+    employeesForTask = [];
+    document.getElementById("containerAssignedTo").innerHTML = `
+    <div class="dropdown">
+        <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
+        <div id="myDropdown" class="dropdown-content">
+        </div>
+    </div>
+    ` 
 }
