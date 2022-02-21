@@ -45,10 +45,10 @@ async function addToTaskBoard(i) {
 function moveTask(index) {
     document.getElementById(index).innerHTML = "";
     document.getElementById(index).classList.add("backlog-content-container-flex");
-    document.getElementById(index).innerHTML += `
+    document.getElementById(index).innerHTML += /*html*/`
     <div class="MoveBacklogButtons" id="backlog${index}" onclick="showBacklog()">
-    <div class="moveToBoard" onclick="addToTaskBoard(${index})"> Move Task To Board </div>
-    <div class="deleteFromBacklog" onclick="deleteTask(${index})"> Delete Task </div>
+        <div class="moveToBoard" onclick="addToTaskBoard(${index})" title="Move to board"> <div class="img-backlog"><img src="assets/img/join_details.png" alt=""></div> </div>
+        <div class="deleteFromBacklog" onclick="deleteTask(${index})" title="Delete"> <div class="img-backlog"><img src="assets/img/join_trash.png" alt=""></div> </div>
     </div>
     `;
 }

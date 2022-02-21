@@ -54,17 +54,25 @@ h3 {
 
 .MoveBacklogButtons {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.moveToBoard:hover {
-    background-color:rgba(17, 88, 2, 0.76);
+.img-backlog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 3px solid black;
+    padding: 5px;
+    margin-left: 20px;
 }
 
+.img-backlog img {
+    width: 40px;
+}
 
-.deleteFromBacklog:hover {
-    background-color:rgba(112, 4, 4, 0.76);
+.img-backlog:hover {
+    background-color: #F1F0FB;
 }
