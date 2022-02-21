@@ -69,17 +69,55 @@ async function drop(status) {
 }
 
 function fillOpenHTML(element) {
-    return /*html*/`<div id="board${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="board-element">
-    <div class="dp-flex"><img class="profile-picture" src="${element["picture"]}" alt=""><div><p>${element['firstName']} ${element['lastName']}</p><p>${element['email']}</p></div></div>
-    <p>${element['category']}</p>
-    <p>${element['title']}</p>
-</div>`
+    return /*html*/`
+    <div id="board${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="board-element">
+        <div class="board-category-first">
+            <img class="profile-picture" src="${element["picture"]}" alt="">
+            <div>
+                <p>${element['firstName']} ${element['lastName']}</p>
+                <p>${element['email']}</p>
+            </div>
+        </div>
+        <p>${element['category']}</p>
+        <p>${element['title']}</p>
+        <div id="board_category_end_no_details_${element['id']}" class="board-category-end">
+            <div class="board-actions" title="Show details" onclick="showDetails(${element['id']})"><img src="assets/img/join_details.png" alt=""></div> 
+            <div class="board-actions" title="Delete" onclick="deleteTaskBoard(${element['id']})"><img src="assets/img/join_trash.png" alt=""></div> 
+        </div>
+    </div>`
 }
 
 function fillCloseHTML(element) {
-    return /*html*/`<div id="board${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="board-element">
-    <div class="dp-flex"><img class="profile-picture" src="${element["picture"]}" alt=""><div><p>${element['firstName']} ${element['lastName']}</p><p>${element['email']}</p></div></div>
-    <p>${element['category']}</p>
-    <p>${element['title']}</p>
-</div>`
+    return /*html*/`
+    <div id="board${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="board-element">
+        <div class="board-category-first">
+            <img class="profile-picture" src="${element["picture"]}" alt="">
+            <div>
+                <p>${element['firstName']} ${element['lastName']}</p>
+                <p>${element['email']}</p>
+            </div>
+        </div>
+        <p>${element['category']}</p>
+        <p>${element['title']}</p>
+        <div id="board_category_end_no_details_${element['id']}" class="board-category-end">
+            <div class="board-actions" title="Show details" onclick="showDetails(${element['id']})"><img src="assets/img/join_details.png" alt=""></div> 
+            <div class="board-actions" title="Delete" onclick="deleteTaskBoard(${element['id']})"><img src="assets/img/join_trash.png" alt=""></div> 
+        </div>
+    </div>`
+}
+
+function showDetails(i) {
+    document.getElementById(`board_category_end_no_details_${i}`).classList.add('dp-none');
+    document.getElementById(`board${i}`).innerHTML += /*html*/`
+    <p id="board_category_end_description_${i}">${taskBoard[i]['description']}</p>
+    <div id="board_category_end_details_${i}" class="board-category-end">
+            <div class="board-actions" title="Show details" onclick="closeDetails(${i})"><img src="assets/img/minus_join.png" alt=""></div> 
+    </div>
+    `;
+}
+
+function closeDetails(i) {
+    document.getElementById(`board_category_end_description_${i}`).remove();
+    document.getElementById(`board_category_end_details_${i}`).remove();
+    document.getElementById(`board_category_end_no_details_${i}`).classList.remove('dp-none');
 }

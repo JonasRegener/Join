@@ -13,6 +13,7 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     left: 0px;
+    z-index: 1900;
 }
 
 .menu-sidebar img {

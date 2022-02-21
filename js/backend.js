@@ -28,6 +28,7 @@ async function deleteTaskBoard(i) {
         taskBoard[i][`id`] = `${i}`;
     }
     await saveTaskBoard();
+    await loadTaskBoard();
 }
 
 async function saveEmployees() {

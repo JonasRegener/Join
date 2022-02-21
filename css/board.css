@@ -1,10 +1,12 @@
 .board {
+    position: absolute;
     display: flex;
-    height: 98vh;
-    padding-left: 140px;
+    height: 100vh;
     padding-right: 5px;
     overflow-y: auto;
     align-items: center;
+    justify-content: center;
+    left: 145px;
 }
 
 .board-section {
@@ -21,6 +23,10 @@
     height: 85%;
     overflow: auto;
 }
+
+/* .board-section-first-part {
+    margin-left: 145px;
+} */
 
 .board-category {
     display: flex;
@@ -39,4 +45,39 @@
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 15px;
+}
+
+.board-category-first {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F1F0FB;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.board-category-end {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.board-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.board-actions img {
+    width: 25px;
+}
+
+.board-actions:hover {
+    cursor: pointer;
+    background-color: #F1F0FB;
 }
