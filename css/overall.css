@@ -27,3 +27,12 @@ body {
 .profil p {
     margin: unset;
 }
+
+.dp-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F1F0FB;
+    padding: 5px;
+    border-radius: 15px;
+}
