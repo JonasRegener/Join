@@ -18,58 +18,60 @@
 
 <body onload="init()">
     <div w3-include-html="menu_two.html"></div>
-    <div class="addTaskMainBox">
+    <div class="content-box">
 
-        <h2>Add Task</h2>
-        <p>Learning Management System Project</p>
+        <div class="headline"><h2>Taskboard</h2></div>
 
         <div class="AddTaskMain" id="addTaskMain" onsubmit="enterInformation()">
-            <div class="container-title">
-                <h3>TITLE</h3>
-                <input id="title" required minlength="0">
+            <div>
+                <div class="container-title">
+                    <h3>TITLE</h3>
+                    <input id="title" required minlength="0">
+                </div>
+                <div class="container-category">
+                    <h3> Category</h3>
+                    <select id="category" required>
+                        <option value="" disabled selected>Select department</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Frontend">Frontend </option>
+                        <option value="Backend">Backend </option>
+                        <option value="SCRUM Master">SCRUM Master </option>
+                        <option value="Outsorcing">Outsorcing </option>
+                    </select>
+                </div>
+                <div class="container-description">
+                    <h3> Description</h3>
+                    <textarea required minlength="0" id="description"></textarea>
+                </div>
             </div>
 
-            <div class="container-date">
-                <h3>DUE DATE</h3>
-                <input class="inputDate" id="date" required type="date">
-            </div>
-
-            <div class="container-category">
-                <h3> Category</h3>
-                <select id="category" required>
-                    <option value="" disabled selected>Select department</option>
-                    <option value="Designer">Designer</option>
-                    <option value="Frontend">Frontend </option>
-                    <option value="Backend">Backend </option>
-                    <option value="SCRUM Master">SCRUM Master </option>
-                    <option value="Outsorcing">Outsorcing </option>
-                </select>
-            </div>
-            <div class="container-urgency">
-                <h3>Urgency</h3>
-                <select id="urgency" required>
-                    <option value="" disable selected> Importance </option>
-                    <option value="1High">High </option>
-                    <option value="Medium">Medium </option>
-                    <option value="Low">Low </option>
-                </select>
-            </div>
-            <div class="container-description">
-                <h3> Description</h3>
-                <textarea required minlength="0" id="description"></textarea>
-            </div>
-            <div class="container-assignedTo">
-                <h3>Assigned To</h3>
-                <div class="containerAssignedTo" id="containerAssignedTo">
-                    <div class="dropdown">
-                        <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
-                        <div id="myDropdown" class="dropdown-content">
+            <div>
+                <div class="container-date">
+                    <h3>DUE DATE</h3>
+                    <input class="inputDate" id="date" required type="date">
+                </div>
+                <div class="container-urgency">
+                    <h3>Urgency</h3>
+                    <select id="urgency" required>
+                        <option value="" disable selected> Importance </option>
+                        <option value="1High">High </option>
+                        <option value="Medium">Medium </option>
+                        <option value="Low">Low </option>
+                    </select>
+                </div>
+                <div class="container-assignedTo">
+                    <h3>Assigned To</h3>
+                    <div class="containerAssignedTo" id="containerAssignedTo">
+                        <div class="dropdown">
+                            <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
+                            <div id="myDropdown" class="dropdown-content">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="AddTaskButtonsBox">
-                    <div class="CancelButton" onclick=""> <b>Cancel</b></div>
-                    <div class="CreateTaskButton" onclick="enterInformation()"><b> Create Task</b></div>
+                    <div class="AddTaskButtonsBox">
+                        <div class="CancelButton" onclick=""> <b>Cancel</b></div>
+                        <div class="CreateTaskButton" onclick="enterInformation()"><b> Create Task</b></div>
+                    </div>
                 </div>
             </div>
         </div>
