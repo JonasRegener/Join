@@ -18,7 +18,8 @@
     background-color: rgb(241, 240, 251);
     border-radius: 15px;
     flex-shrink: 0;
-    width: 450px;
+    flex-grow: 1;
+    width: 350px;
     max-height: 95%;
     overflow: auto;
 }
