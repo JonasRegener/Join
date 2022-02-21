@@ -1,12 +1,11 @@
 .board {
-    position: absolute;
+    margin-left: 156px;
     display: flex;
-    height: 100vh;
-    padding-right: 5px;
-    overflow-y: auto;
     align-items: center;
     justify-content: center;
-    left: 145px;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: scroll;
 }
 
 .board-section {
@@ -21,12 +20,7 @@
     flex-shrink: 0;
     width: 450px;
     height: 85%;
-    overflow: auto;
 }
-
-/* .board-section-first-part {
-    margin-left: 145px;
-} */
 
 .board-category {
     display: flex;
