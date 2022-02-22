@@ -83,3 +83,26 @@ label #cancel {
 #check:checked ~ label #cancel {
     left: 195px;
 } 
+
+.index {
+    position: relative;
+    display: inline-block;
+}
+
+.index .indextext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position of text */
+    position: absolute;
+    z-index: 1;
+}
+
+.index:hover .indextext {
+    visibility: visible;
+  }
