@@ -1,38 +1,61 @@
+let title;
+let category;
+let urgency;
+let description;
+let date;
+let firstName;
+let lastName;
+let email;
+let picture;
+let color;
 
 async function enterInformation() {
     for (let i = 0; i < employeesForTask.length; i++) {
         const element = employeesForTask[i];
         await init();
-        let title = document.getElementById("title").value;
-        let category = document.getElementById("category").value;
-        let urgency = document.getElementById("urgency").value;
-        let description = document.getElementById("description").value;
-        let date = document.getElementById("date").value;
-        let firstName = element["firstName"];
-        let lastName = element["lastName"];
-        let email = element["email"];
-        let picture = element["picture"];
-        let color;
-        if (category == 'Designer') {
-            color = '#e2d810';
-        }
-        if (category == 'Frontend') {
-            color = '#d9138a';
-        }
-        if (category == 'Backend') {
-            color = '#12a4d9';
-        }
-        if (category == 'SCRUM Master') {
-            color = '#322e2f';
-        }
-        if (category == 'Outsorcing') {
-            color = '#5c3c92';
-        }
+
+        readoutInputs();
+        readoutSelectedEmployees(element);
+        defineCategoryColor();
+        
         let currentInformation = { "title": title, "category": category, "urgency": urgency, "description": description, "date": date, "color": color, "firstName": firstName, "lastName": lastName, "email": email, "picture": picture};
         informations.push(currentInformation);
-        await saveInformations();   
+        await saveInformations(); 
     }
     resetInformation();
+}
+
+function readoutInputs() {
+    title = document.getElementById("title").value;
+    category = document.getElementById("category").value;
+    urgency = document.getElementById("urgency").value;
+    description = document.getElementById("description").value;
+    date = document.getElementById("date").value;
+}
+
+function readoutSelectedEmployees(element) {
+    firstName = element["firstName"];
+    lastName = element["lastName"];
+    email = element["email"];
+    picture = element["picture"];
+}
+
+function defineCategoryColor() {
+    if (category == 'Designer') {
+        color = '#e2d810';
+    }
+    if (category == 'Frontend') {
+        color = '#d9138a';
+    }
+    if (category == 'Backend') {
+        color = '#12a4d9';
+    }
+    if (category == 'SCRUM Master') {
+        color = '#322e2f';
+    }
+    if (category == 'Outsorcing') {
+        color = '#5c3c92';
+    }
 }
 
 function addSelectedEmployees(i) {
