@@ -47,6 +47,25 @@
     .sidebar {
         z-index: 1000;
     }
+    .content-box-welcome {
+        height: 85vh;
+        justify-content: space-around;
+    }
+    .welcome-content-box h2 {
+        font-size: 1.2em;
+    }
+    .welcome-content-box p {
+        font-size: 1em;
+    }
+    .welcome-img {
+        display: none;
+    }
+    .GITBox img {
+        width: 35px !important;
+    }
+    .GITBox h3 {
+        font-size: 1.0em !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -116,6 +135,16 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+    .welcome-content-box {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .welcome-img {
+        width: 10% !important;
+    }
+    .GITBoxSmall {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 640px) {
@@ -129,6 +158,12 @@
     }
     .add-buttons {
         margin-bottom: 35px;
+    }
+    .GITBox {
+        width: 99vw;
+    }
+    .GITBoxSmall {
+        width: 50%;
     }
 }
 
@@ -164,6 +199,12 @@
     .backlog-content-container {
         width: unset;
     }
+    .GITBoxSmall img {
+        width: 50px;
+    }
+    .welcome-img {
+        width: 7%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -178,6 +219,10 @@
     }
     #help_box4 {
         margin-bottom: 30px;
+    }
+    .welcome-content-box {
+        padding-left: 35px;
+        padding-right: 35px;
     }
 }
 
