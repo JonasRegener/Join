@@ -4,7 +4,26 @@
 // color Scrum #322e2f
 // color outsourcing #5c3c92
 
-let employees = [];
+let employees = [
+    // {
+    //     "firstName": "Nina",
+    //     "lastName": "Muster",
+    //     "email": "nina.muster@join.de",
+    //     "picture": "assets/profil/profil_1.jpg"
+    // },
+    // {
+    //     "firstName": "Jana",
+    //     "lastName": "Tuffel",
+    //     "email": "jana.tuffel@join.de",
+    //     "picture": "assets/profil/profil_3.jpg"
+    // },
+    // {
+    //     "firstName": "Mark",
+    //     "lastName": "Anders",
+    //     "email": "mark.anders@join.de",
+    //     "picture": "assets/profil/profil_2.jpg"
+    // }
+];
 let employeesForTask = [];
 let taskBoard = [];
 let informations = [];
@@ -23,7 +42,7 @@ function includeHTML() {
         if (file) {
             /* Make an HTTP request using the attribute value as the file name: */
             xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 200) {
                         elmnt.innerHTML = this.responseText;

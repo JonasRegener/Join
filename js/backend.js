@@ -7,6 +7,7 @@ async function saveInformations() {
 async function init() {
     informations = '';
     taskBoard = '';
+    employees = '';
     await downloadFromServer();
     informations = JSON.parse(backend.getItem('informations')) || [];
     taskBoard = JSON.parse(backend.getItem('taskBoard')) || [];
@@ -37,5 +38,5 @@ async function saveEmployees() {
 
 async function deleteEmployees(i) {
     employees.splice([i], 1);
-    await employees();
+    await saveEmployees();
 }

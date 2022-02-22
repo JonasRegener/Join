@@ -56,6 +56,7 @@ function showHelp(i) {
                     <li>Add/editing categories, employees, urgencys </li>
                     <li>Create clients</li>
                     <li>Full responsive layout</li>
+                    <li>Filter functions</li>
                     <li>...further functions are planned</li>
                 </ul>
         </div>

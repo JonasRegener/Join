@@ -1,0 +1,79 @@
+@media (max-width: 360px) {
+    .content-box {
+        padding-top: 80px;
+    }
+    .board-section {
+        width: 305px;
+    }
+    .board-element {
+        width: 75%;
+    }
+    .headline {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 150px !important;
+        z-index: 1 !important;
+    }
+    .headline h2 {
+        font-size: 1.5em !important;  
+    }
+}
+
+@media (max-width: 480px) {
+    .board-content {
+        height: 85vh !important;
+    }
+    .assignedToUserImage {
+        display: none;
+    }
+    .assignedToCategory {
+        text-align: center;
+    }
+    .assignedToDetails {
+        text-align: center;
+    }
+    .assignedToPerson {
+        width: 35% !important;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .headline {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 940px) {
+    .headline h2 {
+        font-size: 1.8em;
+    }
+    .assignedToUserImage {
+        margin-right: 16px;
+    }
+    .assignedToDetails {
+        width: 250px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1500px) {
+    .board-content {
+        height: 88vh;
+    }
+    .backlog-content {
+        height: 85vh;
+    }
+}
