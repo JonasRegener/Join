@@ -1,17 +1,25 @@
 setURL('http://gruppe-164.developerakademie.net/smallest_backend_ever');
 
-async function saveInformations() {
-    await backend.setItem('informations', JSON.stringify(informations));
+async function init() {
+    await clearAllArrays();
+    await downloadFromServer();
+    await fillAllArraysWithContentFromServer();
 }
 
-async function init() {
+async function clearAllArrays() {
     informations = '';
     taskBoard = '';
     employees = '';
-    await downloadFromServer();
+}
+
+async function fillAllArraysWithContentFromServer() {
     informations = JSON.parse(backend.getItem('informations')) || [];
     taskBoard = JSON.parse(backend.getItem('taskBoard')) || [];
     employees = JSON.parse(backend.getItem('employees')) || [];
+}
+
+async function saveInformations() {
+    await backend.setItem('informations', JSON.stringify(informations));
 }
 
 async function deleteTask(i) {

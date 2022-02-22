@@ -32,9 +32,51 @@ async function enterInformation() {
         informations.push(currentInformation);
         await saveInformations();   
     }
-
     resetInformation();
 }
+
+function addSelectedEmployees(i) {
+    document.getElementById("containerAssignedTo").innerHTML += `
+    <div class="profil" id="profil${i}" onclick="deleteSelectedEmployees(${i})">
+        <img class="profile-picture" src="${employees[i]["picture"]}" alt="">
+        <p>${employees[i]["firstName"]}</p>
+        <p>${employees[i]["lastName"]}</p>
+    </div>
+    `
+    employeesForTask.push(employees[i]);
+}
+
+function deleteSelectedEmployees(i) {
+    let selectedEmployees = document.getElementById(`profil${i}`);
+    selectedEmployees.remove();
+    employeesForTask.splice([i], 1)
+}
+
+function resetInformation() {
+    clearAllInputs();
+    resetAssignedToInput();
+}
+
+function clearAllInputs() {
+    document.getElementById("title").value = '';
+    document.getElementById("category").value = '';
+    document.getElementById("urgency").value = '';
+    document.getElementById("description").value = '';
+    document.getElementById("date").value = '';
+    employeesForTask = [];
+}
+
+function resetAssignedToInput() {
+    document.getElementById("containerAssignedTo").innerHTML = `
+    <div class="dropdown">
+        <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
+        <div id="myDropdown" class="dropdown-content">
+        </div>
+    </div>
+    ` 
+}
+
+// DROPDOWN EMPLOYEES FROM W3SCHOOLS
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -62,37 +104,4 @@ window.onclick = function (event) {
         }
         document.getElementById("myDropdown").innerHTML = '';
     }
-}
-
-function addSelectedEmployees(i) {
-    document.getElementById("containerAssignedTo").innerHTML += `
-    <div class="profil" id="profil${i}" onclick="deleteSelectedEmployees(${i})">
-        <img class="profile-picture" src="${employees[i]["picture"]}" alt="">
-        <p>${employees[i]["firstName"]}</p>
-        <p>${employees[i]["lastName"]}</p>
-    </div>
-    `
-    employeesForTask.push(employees[i]);
-}
-
-function deleteSelectedEmployees(i) {
-    let selectedEmployees = document.getElementById(`profil${i}`);
-    selectedEmployees.remove();
-    employeesForTask.splice([i], 1)
-}
-
-function resetInformation() {
-    document.getElementById("title").value = '';
-    document.getElementById("category").value = '';
-    document.getElementById("urgency").value = '';
-    document.getElementById("description").value = '';
-    document.getElementById("date").value = '';
-    employeesForTask = [];
-    document.getElementById("containerAssignedTo").innerHTML = `
-    <div class="dropdown">
-        <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
-        <div id="myDropdown" class="dropdown-content">
-        </div>
-    </div>
-    ` 
 }

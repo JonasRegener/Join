@@ -1,4 +1,3 @@
-
 let toDo;
 let inProgress;
 let testing;
@@ -12,19 +11,25 @@ async function loadTaskBoard() {
 }
 
 function updateHTML() {
-    toDo = taskBoard.filter(t => t['status'] == 'toDo');
+    filterAndFillToDo();
+    filterAndFillInProgress();
+    filterAndFillTesting();
+    filterAndFillDone();
+}
 
+function filterAndFillToDo() {
+    toDo = taskBoard.filter(t => t['status'] == 'toDo');
     document.getElementById('toDo').innerHTML = '';
 
     for (let i = 0; i < toDo.length; i++) {
         const element = toDo[i];
-
         document.getElementById('toDo').innerHTML += fillOpenHTML(element);
         document.getElementById(`board${element['id']}`).style.borderLeft = `8px solid ${element['color']}`;
     }
+}
 
+function filterAndFillInProgress() {
     inProgress = taskBoard.filter(t => t['status'] == 'inProgress');
-
     document.getElementById('inProgress').innerHTML = '';
 
     for (let i = 0; i < inProgress.length; i++) {
@@ -32,9 +37,10 @@ function updateHTML() {
         document.getElementById('inProgress').innerHTML += fillCloseHTML(element);
         document.getElementById(`board${element['id']}`).style.borderLeft = `8px solid ${element['color']}`;
     }
+}
 
+function filterAndFillTesting() {
     testing = taskBoard.filter(t => t['status'] == 'testing');
-
     document.getElementById('testing').innerHTML = '';
 
     for (let i = 0; i < testing.length; i++) {
@@ -42,9 +48,10 @@ function updateHTML() {
         document.getElementById('testing').innerHTML += fillCloseHTML(element);
         document.getElementById(`board${element['id']}`).style.borderLeft = `8px solid ${element['color']}`;
     }
+}
 
+function filterAndFillDone() {
     done = taskBoard.filter(t => t['status'] == 'done');
-
     document.getElementById('done').innerHTML = '';
 
     for (let i = 0; i < done.length; i++) {
