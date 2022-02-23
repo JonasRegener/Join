@@ -74,6 +74,8 @@ function showHelpAbout(i) {
                 <li>Create clients</li>
                 <li>Full responsive layout</li>
                 <li>Filter functions</li>
+                <li>Touchscreen support</li>
+                <li>Full backend integration</li>
                 <li>...further functions are planned</li>
             </ul>
     </div>
