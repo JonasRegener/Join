@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/addTask.css">
     <link rel="stylesheet" type="text/css" href="css/menu_two.css">
     <link rel="stylesheet" type="text/css" href="css/overall.css">
+    <link rel="stylesheet" href="css/respnsive.css">
     <script src="js/mini_backend.js"></script>
     <script src="js/backend.js"></script>
     <script src="js/addTask.js"></script>
@@ -19,8 +20,10 @@
 <body onload="init()">
     <div w3-include-html="menu_two.html"></div>
     <div class="content-box">
-
-        <div class="headline"><h2>Create task</h2></div>
+        
+        <div class="headline">
+            <h2>Create task</h2>
+        </div>
 
         <div class="AddTaskMain" id="addTaskMain" onsubmit="enterInformation()">
             <div>
@@ -63,7 +66,8 @@
                     <h3>Assigned To</h3>
                     <div class="containerAssignedTo" id="containerAssignedTo">
                         <div class="dropdown">
-                            <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt="" onclick="showEmployees()">
+                            <img class="addAssignedTo" src="assets/img/icons8-plus.png" alt=""
+                                onclick="showEmployees()">
                             <div id="myDropdown" class="dropdown-content">
                             </div>
                         </div>

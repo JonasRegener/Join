@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -9,32 +12,44 @@
     <link rel="stylesheet" type="text/css" href="css/help.css">
     <link rel="stylesheet" type="text/css" href="css/menu_two.css">
     <link rel="stylesheet" type="text/css" href="css/overall.css">
+    <link rel="stylesheet" href="css/respnsive.css">
     <script src="js/help.js"></script>
     <script src="js/overall.js"></script>
 
 </head>
 
+
 <body>
     <div w3-include-html="menu_two.html"></div>
-    <div class="content-box">
-        <h2 class="headline">Help</h2>
-        <p>Learning Management System Project</p>
-        <h3>Board</h3>
-        <div class="helpbox"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quam illum provident nobis
-            eos mollitia ipsa quibusdam, tenetur temporibus facilis excepturi atque labore modi non?</div>
-        <h3>Backlog</h3>
-        <div class="helpbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ea quisquam nihil porro
-            suscipit enim quae dolores, possimus eos repellendus, quas deserunt? Ex explicabo ducimus voluptatum
-            officiis voluptates alias exercitationem, modi, velit at a delectus iste, aperiam eligendi nam maiores
-            laboriosam sit assumenda incidunt. Eum laborum eius placeat at asperiores!</div>
-        <h3>Add Task</h3>
-        <div class="helpbox">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odit beatae itaque eligendi
-            dolore assumenda molestiae vero laborum quos hic minima repellat recusandae placeat nihil modi qui, nulla
-            eaque omnis, temporibus possimus at iste deserunt, dolor numquam. Adipisci blanditiis explicabo quas ullam,
-            fugit doloribus veritatis. Perferendis quo quam veniam nemo.</div>
 
+    <div class="content-box">
+        <div class="headline">
+            <h2>Helpdesk</h2>
+        </div>
+        <div class="help-box" id="help_box1" onclick="showHelp(1)">
+            <div class="headline">
+                <h3>Add Task</h3>
+            </div>
+        </div>
+        <div class="help-box" id="help_box2" onclick="showHelp(2)">
+            <div class="headline">
+                <h3>Backlog</h3>
+            </div>
+        </div>
+        <div class="help-box" id="help_box3" onclick="showHelp(3)">
+            <div class="headline">
+                <h3>Board</h3>
+            </div>
+        </div>
+        <div class="help-box" id="help_box4" onclick="showHelp(4)">
+            <div class="headline">
+                <h3>About</h3>
+            </div>
+        </div>
     </div>
 </body>
+
+
 <script>
     includeHTML();
 </script>

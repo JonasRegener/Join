@@ -1,16 +1,25 @@
-setURL('http://gruppe-164.developerakademie.net/smallest_backend_ever');
-
-async function saveInformations() {
-    await backend.setItem('informations', JSON.stringify(informations));
-}
+setURL('jonasregener.de/smallest_backend_ever');
 
 async function init() {
+    await clearAllArrays();
+    await downloadFromServer();
+    await fillAllArraysWithContentFromServer();
+}
+
+async function clearAllArrays() {
     informations = '';
     taskBoard = '';
-    await downloadFromServer();
+    employees = '';
+}
+
+async function fillAllArraysWithContentFromServer() {
     informations = JSON.parse(backend.getItem('informations')) || [];
     taskBoard = JSON.parse(backend.getItem('taskBoard')) || [];
     employees = JSON.parse(backend.getItem('employees')) || [];
+}
+
+async function saveInformations() {
+    await backend.setItem('informations', JSON.stringify(informations));
 }
 
 async function deleteTask(i) {
@@ -37,5 +46,5 @@ async function saveEmployees() {
 
 async function deleteEmployees(i) {
     employees.splice([i], 1);
-    await employees();
+    await saveEmployees();
 }
