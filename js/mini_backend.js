@@ -14,6 +14,34 @@ try {
     }
 }
 
+async function getTodos(id) {
+    try { 
+        let singleJsonResponse = await fetch('http://127.0.0.1:8000/todos/' + id, {  method: 'GET', headers: { 'Content-Type': 'application/json', }});
+        if(!singleJsonResponse.ok)
+            throw new Error("Response not ok")
+        const tasks = await singleJsonResponse.json();
+        console.log(tasks); }
+        catch (error) {
+            console.error(error)
+        }
+    }
+
+
+    function postTodo(a,b,c,d,e,f){
+        var xhr = new XMLHttpRequest();
+var url = "url";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        var json = JSON.parse(xhr.responseText);
+        console.log(json.email + ", " + json.password);
+    }
+};
+var data = JSON.stringify({"title": a, "description" : b, due_date, user,category, prio });
+xhr.send(data);
+    }
+
 /* let jsonFromServer = {};
 let BASE_SERVER_URL;
 
