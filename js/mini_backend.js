@@ -1,4 +1,10 @@
-let jsonFromServer = {};
+let response = {}
+let URL = '127.0.0.1:8000'
+let ListURL = '127.0.0.1:8000/todos/'
+
+
+
+/* let jsonFromServer = {};
 let BASE_SERVER_URL;
 
 const backend = {
@@ -35,7 +41,7 @@ function setURL(url) {
  * Loads a JSON or JSON Array to the Server
  * payload {JSON | Array} - The payload you want to store
  */
-
+/* 
 async function loadJSONFromServer() {
     let response = await fetch(BASE_SERVER_URL + '/nocors.php?json=database&noache=' + (new Date().getTime()));
     return await response.text();
@@ -68,7 +74,7 @@ function loadJSONFromServerOld() {
 
     });
 }
-
+ */
 
 
 
@@ -76,6 +82,8 @@ function loadJSONFromServerOld() {
 /**
  * Saves a JSON or JSON Array to the Server
  */
+
+/*
 function saveJSONToServer() {
     return new Promise(function(resolve, reject) {
         let xhttp = new XMLHttpRequest();
@@ -109,3 +117,4 @@ function determineProxySettings() {
         return 'https://cors-anywhere.herokuapp.com/';
     }
 }
+ */
