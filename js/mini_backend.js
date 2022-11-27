@@ -1,8 +1,18 @@
-let response = {}
-let URL = '127.0.0.1:8000'
-let ListURL = '127.0.0.1:8000/todos/'
+let response = {};
+let URL = '127.0.0.1:8000';
+let List = '127.0.0.1:8000/todos/';
 
-
+async function getTodos() {
+try { 
+    let response2 = await fetch('http://127.0.0.1:8000/todos/', {  method: 'GET', headers: { 'Content-Type': 'application/json', }});
+    if(!response2.ok)
+        throw new Error("Response not ok")
+    const tasks = await response2.json();
+    console.log(tasks); }
+    catch (error) {
+        console.error(error)
+    }
+}
 
 /* let jsonFromServer = {};
 let BASE_SERVER_URL;
