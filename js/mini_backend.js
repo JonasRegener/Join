@@ -1,22 +1,29 @@
 let response = {};
 let URL = '127.0.0.1:8000';
-let List = '127.0.0.1:8000/todos/';
+let List = 'http://127.0.0.1:8000/todos/';
+let a = 'Test1tit'
+let b = 'Test1desc'
+let c = 'MA'
+let d = 'H'
+let e = 'Hans Wurst'
+let f = '2022-12-08'
 
 async function getTodos() {
-try { 
-    let response2 = await fetch('http://127.0.0.1:8000/todos/', {  method: 'GET', headers: { 'Content-Type': 'application/json', }});
-    if(!response2.ok)
-        throw new Error("Response not ok")
-    const tasks = await response2.json();
-    console.log(tasks); }
+    try {
+        let response2 = await fetch('http://127.0.0.1:8000/todos/', { method: 'GET', headers: { 'Content-Type': 'application/json', } });
+        if (!response2.ok)
+            throw new Error("Response not ok")
+        const tasks = await response2.json();
+        console.log(tasks);
+    }
     catch (error) {
         console.error(error)
     }
 }
 
-async function getTodos(id) {
+/* async function getTodos(id) {
     try { 
-        let singleJsonResponse = await fetch('http://127.0.0.1:8000/todos/' + id, {  method: 'GET', headers: { 'Content-Type': 'application/json', }});
+        let singleJsonResponse = await fetch('https://jonas34.pythonanywhere.com/todos/' + id, {  method: 'GET', headers: { 'Content-Type': 'application/json', }});
         if(!singleJsonResponse.ok)
             throw new Error("Response not ok")
         const tasks = await singleJsonResponse.json();
@@ -24,23 +31,126 @@ async function getTodos(id) {
         catch (error) {
             console.error(error)
         }
+    } */
+
+
+function postTodo() {
+    let a = 'Test1tit'
+let b = 'Test1desc'
+let c = 'MA'
+let d = 'H'
+let e = 'Hans Wurst'
+let f = '2022-12-08'
+    var xhr = new XMLHttpRequest();
+    var url = "http://127.0.0.1:8000/todos/";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var json = JSON.parse(xhr.responseText);
+            console.log(json);
+        }
+    };
+    var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
+    xhr.send(data);
+}
+
+function postTodo2() {
+    let a = 'Test1tit'
+let b = 'Test1desc'
+let c = 'MA'
+let d = 'H'
+let e = 'Hans Wurst'
+let f = '2022-12-08'
+    return new Promise(function(resolve, reject) {
+        let xhttp = new XMLHttpRequest();
+        let serverURL = 'http://127.0.0.1:8000/todos/';
+        xhttp.open('POST', serverURL);
+
+        xhttp.onreadystatechange = function(oEvent) {
+            if (xhttp.readyState === 4) {
+                if (xhttp.status >= 200 && xhttp.status <= 399) {
+                    resolve(xhttp.responseText);
+                } else {
+                    reject(xhttp.statusText);
+                }
+            }
+        };
+        var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
+        xhttp.setRequestHeader("Content-Type", "application/json", data);
+        xhttp.send(data);
+
+    });
+}
+
+
+
+
+
+async function postTodo3() {
+    let a = 'Test1tit'
+    let b = 'Test1desc'
+    let c = 'MA'
+    let d = 'H'
+    let e = 'Hans Wurst'
+    let f = '2022-12-08'
+    var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
+    try {
+        let response2 = await fetch('http://127.0.0.1:8000/todos/', { method: 'POST', body: data, headers: { 'Content-Type': 'application/json', } });
+        if (!response2.ok)
+            throw new Error("Response not ok")
+        const tasks = await response2.json();
+        console.log(tasks);
     }
+    catch (error) {
+        console.error(error)
+    }
+}
 
 
-    function postTodo(a,b,c,d,e,f){
-        var xhr = new XMLHttpRequest();
-var url = "url";
-xhr.open("POST", url, true);
+async function postTodo4() {
+    let a = 'Test1tit'
+    let b = 'Test1desc'
+    let c = 'MA'
+    let d = 'H'
+    let e = 'Hans Wurst'
+    let f = '2022-12-08'
+    var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
+    console.log(data)
+    fetch('http://127.0.0.1:8000/todos/', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: data
+})
+.then(response => response.json())
+.then(response => console.log(JSON.stringify(response)))
+}
+
+async function postTodo5() {
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "http://127.0.0.1:8000/todos/");
+xhr.setRequestHeader("Accept", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
+
 xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        var json = JSON.parse(xhr.responseText);
-        console.log(json.email + ", " + json.password);
-    }
-};
-var data = JSON.stringify({"title": a, "description" : b, due_date, user,category, prio });
+  if (xhr.readyState === 4) {
+    console.log(xhr.status);
+    console.log(xhr.responseText);
+  }};
+
+  let a = 'Test1tit'
+  let b = 'Test1desc'
+  let c = 'MA'
+  let d = 'H'
+  let e = 'Hans Wurst'
+  let f = '2022-12-08'
+  var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
+
 xhr.send(data);
-    }
+}
 
 /* let jsonFromServer = {};
 let BASE_SERVER_URL;
