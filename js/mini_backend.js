@@ -21,6 +21,18 @@ async function getTodos() {
     }
 }
 
+async function getSubtasks() {
+    try {
+        let response2 = await fetch('http://127.0.0.1:8000/subtasks/', { method: 'GET', headers: { 'Content-Type': 'application/json', } });
+        if (!response2.ok)
+            throw new Error("Response not ok")
+        const tasks = await response2.json();
+        console.log(tasks);
+    }
+    catch (error) {
+        console.error(error)
+    }
+}
 /* async function getTodos(id) {
     try { 
         let singleJsonResponse = await fetch('https://jonas34.pythonanywhere.com/todos/' + id, {  method: 'GET', headers: { 'Content-Type': 'application/json', }});
@@ -151,6 +163,25 @@ xhr.onreadystatechange = function () {
 
 xhr.send(data);
 }
+
+async function postSubtask() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://127.0.0.1:8000/subtasks/");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        console.log(xhr.status);
+        console.log(xhr.responseText);
+      }};
+    
+     
+      var data = JSON.stringify({ "title": "abc" });
+    
+    xhr.send(data);    
+}
+
 
 /* let jsonFromServer = {};
 let BASE_SERVER_URL;
