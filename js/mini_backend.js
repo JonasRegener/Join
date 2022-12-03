@@ -33,6 +33,26 @@ async function getSubtasks() {
         console.error(error)
     }
 }
+
+
+async function updateTodo() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("UPDATE", "http://127.0.0.1:8000/todos/1");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+        }
+    };
+
+
+    var data = JSON.stringify({ "id": 2 });
+
+    xhr.send(data);
+}
 /* async function getTodos(id) {
     try { 
         let singleJsonResponse = await fetch('https://jonas34.pythonanywhere.com/todos/' + id, {  method: 'GET', headers: { 'Content-Type': 'application/json', }});
@@ -48,11 +68,11 @@ async function getSubtasks() {
 
 function postTodo() {
     let a = 'Test1tit'
-let b = 'Test1desc'
-let c = 'MA'
-let d = 'H'
-let e = 'Hans Wurst'
-let f = '2022-12-08'
+    let b = 'Test1desc'
+    let c = 'MA'
+    let d = 'H'
+    let e = 'Hans Wurst'
+    let f = '2022-12-08'
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:8000/todos/";
     xhr.open("POST", url, true);
@@ -69,17 +89,17 @@ let f = '2022-12-08'
 
 function postTodo2() {
     let a = 'Test1tit'
-let b = 'Test1desc'
-let c = 'MA'
-let d = 'H'
-let e = 'Hans Wurst'
-let f = '2022-12-08'
-    return new Promise(function(resolve, reject) {
+    let b = 'Test1desc'
+    let c = 'MA'
+    let d = 'H'
+    let e = 'Hans Wurst'
+    let f = '2022-12-08'
+    return new Promise(function (resolve, reject) {
         let xhttp = new XMLHttpRequest();
         let serverURL = 'http://127.0.0.1:8000/todos/';
         xhttp.open('POST', serverURL);
 
-        xhttp.onreadystatechange = function(oEvent) {
+        xhttp.onreadystatechange = function (oEvent) {
             if (xhttp.readyState === 4) {
                 if (xhttp.status >= 200 && xhttp.status <= 399) {
                     resolve(xhttp.responseText);
@@ -126,42 +146,47 @@ async function postTodo4() {
     let c = 'MA'
     let d = 'H'
     let e = 'Hans Wurst'
-    let f = '2022-12-08'
-    var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
+    let f = '12/30/2022'
+    var data = JSON.stringify({
+        "title": "Jenny", "description": "ist die beste", "category": "MA", "priority": "H", "user": "Jonas", "due_date": "12/30/2022", "subtasks": [{
+            "title": "jenny hauen"
+        }, { "title": "war nur spaß" }]
+    });
     console.log(data)
     fetch('http://127.0.0.1:8000/todos/', {
-    method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: data
-})
-.then(response => response.json())
-.then(response => console.log(JSON.stringify(response)))
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: data
+    })
+        .then(response => response.json())
+        .then(response => console.log(JSON.stringify(response)))
 }
 
 async function postTodo5() {
-let xhr = new XMLHttpRequest();
-xhr.open("POST", "http://127.0.0.1:8000/todos/");
-xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("Content-Type", "application/json");
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://127.0.0.1:8000/todos/");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
 
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === 4) {
-    console.log(xhr.status);
-    console.log(xhr.responseText);
-  }};
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+        }
+    };
 
-  let a = 'Test1tit'
-  let b = 'Test1desc'
-  let c = 'MA'
-  let d = 'H'
-  let e = 'Hans Wurst'
-  let f = '2022-12-08'
-  var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
+    let a = 'Test1tit'
+    let b = 'Test1desc'
+    let c = 'MA'
+    let d = 'H'
+    let e = 'Hans Wurst'
+    let f = '2022-12-08'
+    var data = JSON.stringify({ "title": "abc", "description": b, "category": c, "priority": d, "user": e, "due_date": f });
 
-xhr.send(data);
+    xhr.send(data);
 }
 
 async function postSubtask() {
@@ -169,17 +194,18 @@ async function postSubtask() {
     xhr.open("POST", "http://127.0.0.1:8000/subtasks/");
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/json");
-    
+
     xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        console.log(xhr.status);
-        console.log(xhr.responseText);
-      }};
-    
-     
-      var data = JSON.stringify({ "title": "abc" });
-    
-    xhr.send(data);    
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+        }
+    };
+
+
+    var data = JSON.stringify({ "title": "abc" });
+
+    xhr.send(data);
 }
 
 
